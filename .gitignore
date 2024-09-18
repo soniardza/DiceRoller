@@ -97,6 +97,9 @@ obj/
 .idea/**/*.xml
 .idea/**/*.pb
 
+# Ignore SonarLint issue store
+.idea/sonarlint/issuestore/
+
 # Legacy Eclipse project files
 .classpath
 .project
