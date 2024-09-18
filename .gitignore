@@ -93,6 +93,10 @@ obj/
 .idea/jarRepositories.xml
 .idea/navEditor.xml
 
+# Ignore .xml and .pb files in .idea and its subdirectories
+.idea/**/*.xml
+.idea/**/*.pb
+
 # Legacy Eclipse project files
 .classpath
 .project
