@@ -29,6 +29,16 @@ android {
             )
         }
     }
+
+    flavorDimensions += "app_type"
+    productFlavors {
+        create("demo") {
+            dimension = "app_type"
+        }
+        create("full") {
+            dimension = "app_type"
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
