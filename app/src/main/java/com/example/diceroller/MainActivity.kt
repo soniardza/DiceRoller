@@ -4,7 +4,10 @@ package com.example.diceroller
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.diceroller.BuildConfig.FLAVOR
 
 /**
  * This activity allows the user to roll a dice and view the result
@@ -55,6 +58,21 @@ class MainActivity : AppCompatActivity() {
 
         // Update the content description
         diceImage.contentDescription = diceRoll.toString()
+
+        // Update the result text view
+        val resultTextView: TextView = findViewById(R.id.resultTextView)
+        if (FLAVOR == "full") {
+            resultTextView.text = when (diceRoll) {
+                1 -> "One"
+                2 -> "Two"
+                3 -> "Three"
+                4 -> "Four"
+                5 -> "Five"
+                else -> "Six"
+            }
+        } else {
+            resultTextView.visibility = View.GONE
+        }
     }
 }
 
