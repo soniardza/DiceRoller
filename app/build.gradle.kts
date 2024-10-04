@@ -34,10 +34,17 @@ android {
     productFlavors {
         create("demo") {
             dimension = "app_type"
+            manifestPlaceholders["appLabel"] = "Dice Roller - Demo"
+            applicationIdSuffix = ".demo"
         }
         create("full") {
             dimension = "app_type"
+            manifestPlaceholders["appLabel"] = "Dice Roller - Full"
+            applicationIdSuffix = ".full"
         }
+    }
+    buildFeatures {
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
